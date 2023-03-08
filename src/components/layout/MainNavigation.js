@@ -10,7 +10,7 @@ function MainNavigation() {
                     <li>
                         <Link to='/'>Exercises Logged</Link>
                     </li>
-                   
+
                 </ul>
             </nav>
         </header>
