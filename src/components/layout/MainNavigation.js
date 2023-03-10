@@ -8,9 +8,11 @@ function MainNavigation() {
             <nav>
                 <ul>
                     <li>
-                        <Link to='/'>Exercises Logged</Link>
+                        <Link to='/'>Main Page</Link>
                     </li>
-
+                    <li>
+                        <Link to='/exercises-logged'>Exercises Logged</Link>
+                    </li>
                 </ul>
             </nav>
         </header>
