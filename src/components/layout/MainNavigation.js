@@ -11,7 +11,13 @@ function MainNavigation() {
                         <Link to='/'>Main Page</Link>
                     </li>
                     <li>
+                        <Link to='/new-exercise'>Add New Exercise</Link>
+                    </li>
+                    <li>
                         <Link to='/exercises-logged'>Exercises Logged</Link>
+                    </li>
+                    <li>
+                        <Link to='/'>Logout</Link>
                     </li>
                 </ul>
             </nav>

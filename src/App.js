@@ -1,6 +1,7 @@
 import { Route, Switch } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import AllExercisesPage from "./pages/AllExercises";
+import LoginPage from "./pages/Login";
 import NewExercisePage from "./pages/NewExercise";
 
 function App() {
@@ -8,6 +9,9 @@ function App() {
     <Layout>
       <Switch>
         <Route path='/' exact>
+          <LoginPage />
+        </Route>
+        <Route path='/new-exercise' exact>
           <NewExercisePage />
         </Route>
         <Route path='/exercises-logged' exact>
