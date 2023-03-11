@@ -4,7 +4,8 @@ import { createContext, useState } from "react";
 const AuthContext = createContext({
     user: null,
     isLoggedIn: false,
-    setUserAuth: () => {}
+    loginUser: () => {},
+    logoutUser: () => {}
 });
 
 export function AuthContextProvider(props) {
@@ -12,6 +13,7 @@ export function AuthContextProvider(props) {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     function loginUser(user) {
+        // communicate here with backend (?)
         setUserAuth(user);
         setIsLoggedIn(true);
     };
