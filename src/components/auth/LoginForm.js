@@ -18,10 +18,14 @@ function LoginForm(props) {
             password: enteredPassword,
         };
 
-        console.log(loginData);
+        props.login(loginData);
     }
     return (
-        <Card>
+        <section>
+            <div className={classes.title}>
+                <h3>Start Tracking Your Workouts</h3>
+            </div>
+            <Card>
             <form className={classes.form} onSubmit={submitHandler}>
                 <div className={classes.control}>
                     <label htmlFor="username">Username</label>
@@ -36,6 +40,7 @@ function LoginForm(props) {
                 </div>
             </form>
         </Card>
+        </section>
     );
 }
 
