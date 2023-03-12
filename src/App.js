@@ -11,6 +11,9 @@ function App() {
         <Route path='/' exact>
           <LoginPage />
         </Route>
+        <Route path='/create-user' exact>
+          <h1>Create user Component</h1>
+        </Route>
         <Route path='/new-exercise' exact>
           <NewExercisePage />
         </Route>
