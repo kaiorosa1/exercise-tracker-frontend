@@ -1,6 +1,7 @@
 import { Route, Switch } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import AllExercisesPage from "./pages/AllExercises";
+import CreateUserPage from "./pages/CreateUser";
 import LoginPage from "./pages/Login";
 import NewExercisePage from "./pages/NewExercise";
 
@@ -12,7 +13,7 @@ function App() {
           <LoginPage />
         </Route>
         <Route path='/create-user' exact>
-          <h1>Create user Component</h1>
+          <CreateUserPage />
         </Route>
         <Route path='/new-exercise' exact>
           <NewExercisePage />
