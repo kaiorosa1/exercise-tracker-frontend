@@ -1,5 +1,5 @@
-import { createContext, useState } from "react";
-
+import { createContext, useState, useEffect } from "react";
+import UseLocalStorage from './useLocalStorage.js';
 
 const AuthContext = createContext({
     user: null,
@@ -12,10 +12,19 @@ const AuthContext = createContext({
 export function AuthContextProvider(props) {
     const [userAuth, setUserAuth] = useState(null);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const { getItem } = UseLocalStorage();
+
+    useEffect(() => {
+        const user = getItem('user');
+        if (user) {
+            loginUser(JSON.parse(user));
+        }
+    }, [getItem]);
 
     function createUser(user) {
         // create User and Log Them In
         setUserAuth(user);
+
         setIsLoggedIn(true);
     }
 
